@@ -1,0 +1,9 @@
+Podział pracy:
+
+Kasia Karbowska:
+
+
+Hanna Tłusty
+- stworzenie pomocniczych funkcji (n-ty wyraz, suma, wykres) dla 3 rodzajów ciągu
+- napisanie części app.route dla 3 ciągów
+- stworzenie dla ciągu geometrycznego i dowolnego podstronki html w stanie surowym

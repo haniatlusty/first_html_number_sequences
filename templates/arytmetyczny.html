@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ciągi Arytmetyczne</title>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'ciagi.css')}}">
+    </head>
+    <body>
+        <header>
+            <p>CIĄGI ARYTMETYCZNE</p>
+            <p id="wstep">Strona o ciągach arytmetycznych. 
+                Dzięki niej możesz możesz sprawdzić wybrany wyraz ciągu, 
+                wyświetlić sumę i zobaczyć wykres ciągu liczbowego.</p>
+        </header>
+        <main>
+            <div class="container">
+                <form action="{{url_for('arytmetyczny')}}" method="POST">
+                    PODAJ PIERWSZY WYRAZ CIĄGU: <input class="in" type="number" name="a1" > <br>
+                    PODAJ RÓŻNICĘ CIĄGU: <input class="in" type="number" name="r"> <br>
+                    PODAJ LICZBĘ N WYRAZÓW: <input class="in" type="number" name="n">
+                    <input class="in" type="submit" value="Potwierdź">
+                </form>
+{% if n is not none %}
+                <p id="nn">Dla n = {{n}}</p>
+{% endif %}       
+{% if wyraz is not none %}
+                <p id="wyrazz">Wyraz n-ty to: {{wyraz}}</p>
+{% endif %}
+{% if suma is not none %}
+                <p id="sumaa">Suma n wyrazów ciągu: {{suma}}</p>
+{% endif %}
+{% if wykres is not none %}
+                <p><img src={{wykres}} alt="Wykres ciągu arytmetycznego"></p>
+{% endif %}
+            </div>
+        </main>
+        <footer>
+            <hr>
+            <div class="author">
+            <p id="Kasia2">@Katarzyna Karbowska</p>
+            <p id="Hania2">@Hanna Tłusty</p>
+            </div>
+        </footer>
+        <div class="gradient"></div>
+    </body>
+</html>
